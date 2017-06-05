@@ -1,7 +1,7 @@
 #+BEGIN_COMMENT
-.. title: Test
+.. title: test
 .. slug: test
-.. date: 2017-06-04 00:13:50 UTC-07:00
+.. date: 2017-06-04 02:01:51 UTC-07:00
 .. tags: 
 .. category: 
 .. link: 
@@ -10,5 +10,4 @@
 #+END_COMMENT
 
 
-* This is a test
-[[file:/Users/mehran/git/mpslxz.github.io/files/test.jpg]]
+[[../../images/Bridge.pdf]]

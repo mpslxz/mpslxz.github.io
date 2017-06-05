@@ -137,6 +137,7 @@ NAVIGATION_LINKS = {
         ("/archive.html", "Archive"),
         ("/categories/", "Tags"),
         ("/rss.xml", "RSS feed"),
+        ("/files/test.cpp", "Blog")
     ),
 }
 
@@ -186,7 +187,6 @@ POSTS = (
     ("posts/*.txt", "posts", "post.tmpl"),
     ("posts/*.html", "posts", "post.tmpl"),
 )
-
 PAGES = (
     ("pages/*.rst", "pages", "story.tmpl"),
     ("pages/*.txt", "pages", "story.tmpl"),
@@ -194,7 +194,6 @@ PAGES = (
 )
 POSTS = POSTS + (("posts/*.org", "posts", "post.tmpl"),)
 PAGES = PAGES + (("stories/*.org", "stories", "story.tmpl"),)
-
 
 # Below this point, everything is optional
 
