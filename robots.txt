@@ -1,4 +1,4 @@
-Sitemap: https://mpslxz.github.io/sitemapindex.xml
+Sitemap: http://mpslxz.github.io/sitemapindex.xml
 
 User-Agent: *
 Host: mpslxz.github.io
