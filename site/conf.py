@@ -18,7 +18,7 @@ import time
 
 # Data about this site
 BLOG_AUTHOR = "Mehran"  # (translatable)
-BLOG_TITLE = "Geek Life"  # (translatable)
+BLOG_TITLE = "[MP]"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
 SITE_URL = "http://mpslxz.github.io/"
@@ -142,12 +142,7 @@ NAVIGATION_LINKS = {
 }
 
 # Name of the theme to use.
-THEME = "canterville"
-LOGO_URL = 'https://getnikola.com/assets/img/logo.svg'
-GLOBAL_CONTEXT = {
-    'BANNER_URL': '/assets/img/silk-road.jpg'
-}
-
+THEME = "bootstrap3"
 
 # Primary color of your theme. This will be used to customize your theme and
 # auto-generate related colors in POSTS_SECTION_COLORS. Must be a HEX value.

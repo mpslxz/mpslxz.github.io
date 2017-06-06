@@ -5,9 +5,9 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1496709591.246974
+_modified_time = 1496719683.456028
 _enable_loop = True
-_template_filename = u'themes/canterville/templates/index.tmpl'
+_template_filename = u'/Users/mehran/anaconda2/lib/python2.7/site-packages/nikola/data/themes/base/templates/index.tmpl'
 _template_uri = u'index.tmpl'
 _source_encoding = 'utf-8'
 _exports = [u'content', u'extra_head', u'content_header']
@@ -41,14 +41,14 @@ def render_body(context,**pageargs):
         __M_locals = __M_dict_builtin(pageargs=pageargs)
         prevlink = context.get('prevlink', UNDEFINED)
         helper = _mako_get_namespace(context, 'helper')
-        comments = _mako_get_namespace(context, 'comments')
+        _link = context.get('_link', UNDEFINED)
         front_index_header = context.get('front_index_header', UNDEFINED)
         index_file = context.get('index_file', UNDEFINED)
         def extra_head():
             return render_extra_head(context._locals(__M_locals))
         def content_header():
             return render_content_header(context._locals(__M_locals))
-        _link = context.get('_link', UNDEFINED)
+        comments = _mako_get_namespace(context, 'comments')
         def content():
             return render_content(context._locals(__M_locals))
         math = _mako_get_namespace(context, 'math')
@@ -64,6 +64,7 @@ def render_body(context,**pageargs):
         current_page = context.get('current_page', UNDEFINED)
         posts = context.get('posts', UNDEFINED)
         prev_next_links_reversed = context.get('prev_next_links_reversed', UNDEFINED)
+        site_has_comments = context.get('site_has_comments', UNDEFINED)
         __M_writer = context.writer()
         __M_writer(u'\n')
         __M_writer(u'\n')
@@ -104,6 +105,7 @@ def render_content(context,**pageargs):
         pagekind = context.get('pagekind', UNDEFINED)
         prev_next_links_reversed = context.get('prev_next_links_reversed', UNDEFINED)
         comments = _mako_get_namespace(context, 'comments')
+        site_has_comments = context.get('site_has_comments', UNDEFINED)
         current_page = context.get('current_page', UNDEFINED)
         index_teasers = context.get('index_teasers', UNDEFINED)
         front_index_header = context.get('front_index_header', UNDEFINED)
@@ -125,20 +127,13 @@ def render_content(context,**pageargs):
             __M_writer(u'\n')
         __M_writer(u'<div class="postindex">\n')
         for post in posts:
-            __M_writer(u'\n\n<article class="post post">\n    <header class="post-header">\n        <h2 class="post-title"><a href="')
+            __M_writer(u'    <article class="h-entry post-')
+            __M_writer(unicode(post.meta('type')))
+            __M_writer(u'">\n    <header>\n        <h1 class="p-name entry-title"><a href="')
             __M_writer(unicode(post.permalink()))
-            __M_writer(u'">')
+            __M_writer(u'" class="u-url">')
             __M_writer(filters.html_escape(unicode(post.title())))
-            __M_writer(u'</a></h2>\n    </header>\n')
-            if index_teasers:
-                __M_writer(u'    <section class="post-excerpt">\n    ')
-                __M_writer(unicode(post.text(teaser_only=True)))
-                __M_writer(u'\n')
-            else:
-                __M_writer(u'    <section class="post-excerpt">\n    ')
-                __M_writer(unicode(post.text(teaser_only=False)))
-                __M_writer(u'\n')
-            __M_writer(u'    </section>\n    <footer class="post-meta">\n')
+            __M_writer(u'</a></h1>\n        <div class="metadata">\n            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">\n')
             if author_pages_generated:
                 __M_writer(u'                <a href="')
                 __M_writer(unicode(_link('author', post.author())))
@@ -149,18 +144,29 @@ def render_content(context,**pageargs):
                 __M_writer(u'                ')
                 __M_writer(filters.html_escape(unicode(post.author())))
                 __M_writer(u'\n')
-            __M_writer(u'\n        on\n')
-            for tag in post.tags:
-                __M_writer(u'                <a href="link://tag/')
-                __M_writer(unicode(tag))
-                __M_writer(u'">#')
-                __M_writer(unicode(tag))
-                __M_writer(u'</a>,\n')
-            __M_writer(u'\n        <time class="post-date" datetime="')
+            __M_writer(u'            </span></p>\n            <p class="dateline"><a href="')
+            __M_writer(unicode(post.permalink()))
+            __M_writer(u'" rel="bookmark"><time class="published dt-published" datetime="')
             __M_writer(unicode(post.formatted_date('webiso')))
-            __M_writer(u'">\n            ')
+            __M_writer(u'" title="')
             __M_writer(filters.html_escape(unicode(post.formatted_date(date_format))))
-            __M_writer(u'\n        </time>\n    </footer>\n</article>\n')
+            __M_writer(u'">')
+            __M_writer(filters.html_escape(unicode(post.formatted_date(date_format))))
+            __M_writer(u'</time></a></p>\n')
+            if not post.meta('nocomments') and site_has_comments:
+                __M_writer(u'                <p class="commentline">')
+                __M_writer(unicode(comments.comment_link(post.permalink(), post._base_path)))
+                __M_writer(u'\n')
+            __M_writer(u'        </div>\n    </header>\n')
+            if index_teasers:
+                __M_writer(u'    <div class="p-summary entry-summary">\n    ')
+                __M_writer(unicode(post.text(teaser_only=True)))
+                __M_writer(u'\n')
+            else:
+                __M_writer(u'    <div class="e-content entry-content">\n    ')
+                __M_writer(unicode(post.text(teaser_only=False)))
+                __M_writer(u'\n')
+            __M_writer(u'    </div>\n    </article>\n')
         __M_writer(u'</div>\n')
         __M_writer(unicode(helper.html_pager()))
         __M_writer(u'\n')
@@ -212,6 +218,6 @@ def render_content_header(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"source_encoding": "utf-8", "line_map": {"128": 26, "129": 30, "130": 30, "131": 30, "132": 30, "133": 32, "134": 33, "135": 34, "136": 34, "137": 35, "138": 36, "139": 37, "140": 37, "141": 39, "142": 41, "143": 42, "144": 42, "145": 42, "146": 42, "147": 42, "148": 43, "149": 44, "150": 44, "23": 5, "152": 46, "153": 48, "26": 3, "155": 49, "156": 49, "29": 2, "158": 49, "159": 51, "32": 4, "161": 52, "162": 53, "163": 53, "164": 58, "165": 59, "38": 0, "167": 60, "168": 60, "169": 61, "170": 61, "157": 49, "176": 8, "187": 8, "151": 44, "189": 9, "190": 10, "191": 11, "192": 11, "160": 52, "194": 13, "195": 13, "68": 2, "69": 3, "70": 4, "71": 5, "72": 6, "202": 17, "77": 14, "82": 62, "193": 11, "213": 202, "88": 16, "166": 59, "188": 9, "196": 13, "154": 49, "112": 16, "117": 17, "118": 18, "119": 19, "120": 19, "121": 19, "122": 21, "123": 22, "124": 22, "125": 22, "126": 24, "127": 25}, "uri": "index.tmpl", "filename": "themes/canterville/templates/index.tmpl"}
+{"source_encoding": "utf-8", "line_map": {"128": 24, "129": 25, "130": 26, "131": 26, "132": 26, "133": 28, "134": 28, "135": 28, "136": 28, "137": 31, "138": 32, "139": 32, "140": 32, "141": 32, "142": 32, "143": 33, "144": 34, "145": 34, "146": 34, "147": 36, "148": 37, "149": 37, "150": 37, "23": 5, "152": 37, "153": 37, "26": 3, "155": 37, "156": 38, "29": 2, "158": 39, "159": 39, "32": 4, "161": 43, "162": 44, "163": 45, "164": 45, "165": 46, "38": 0, "167": 48, "168": 48, "169": 50, "170": 53, "171": 54, "172": 54, "173": 55, "174": 55, "157": 39, "176": 56, "200": 13, "182": 8, "201": 13, "151": 37, "193": 8, "198": 11, "160": 41, "175": 56, "195": 9, "196": 10, "69": 2, "70": 3, "71": 4, "72": 5, "73": 6, "202": 13, "78": 14, "208": 17, "83": 57, "197": 11, "89": 16, "219": 208, "199": 11, "166": 47, "194": 9, "154": 37, "114": 16, "119": 17, "120": 18, "121": 19, "122": 19, "123": 19, "124": 21, "125": 22, "126": 22, "127": 22}, "uri": "index.tmpl", "filename": "/Users/mehran/anaconda2/lib/python2.7/site-packages/nikola/data/themes/base/templates/index.tmpl"}
 __M_END_METADATA
 """

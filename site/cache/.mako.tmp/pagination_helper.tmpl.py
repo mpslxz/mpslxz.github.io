@@ -5,9 +5,9 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1496709591.3289
+_modified_time = 1496719683.54761
 _enable_loop = True
-_template_filename = u'/Users/mehran/anaconda2/lib/python2.7/site-packages/nikola/data/themes/base/templates/pagination_helper.tmpl'
+_template_filename = u'/Users/mehran/anaconda2/lib/python2.7/site-packages/nikola/data/themes/bootstrap3/templates/pagination_helper.tmpl'
 _template_uri = u'pagination_helper.tmpl'
 _source_encoding = 'utf-8'
 _exports = ['page_navigation']
@@ -28,25 +28,68 @@ def render_page_navigation(context,current_page,page_links,prevlink,nextlink,pre
     __M_caller = context.caller_stack._push_frame()
     try:
         abs = context.get('abs', UNDEFINED)
+        messages = context.get('messages', UNDEFINED)
         len = context.get('len', UNDEFINED)
         enumerate = context.get('enumerate', UNDEFINED)
         __M_writer = context.writer()
-        __M_writer(u'\n<div class="page-navigation">\n')
+        __M_writer(u'\n<nav aria-label="Page navigation">\n  <ul class="pagination">\n')
+        if prev_next_links_reversed:
+            if nextlink:
+                __M_writer(u'      <li><a href="')
+                __M_writer(unicode(nextlink))
+                __M_writer(u'" aria-label="')
+                __M_writer(unicode(messages("Older posts")))
+                __M_writer(u'"><span aria-hidden="true">&laquo;</span></a></li>\n')
+            else:
+                __M_writer(u'      <li class="disabled"><a href="#" aria-label="')
+                __M_writer(unicode(messages("Older posts")))
+                __M_writer(u'"><span aria-hidden="true">&laquo;</span></a></li>\n')
+        else:
+            if prevlink:
+                __M_writer(u'      <li><a href="')
+                __M_writer(unicode(prevlink))
+                __M_writer(u'" aria-label="')
+                __M_writer(unicode(messages("Newer posts")))
+                __M_writer(u'"><span aria-hidden="true">&laquo;</span></a></li>\n')
+            else:
+                __M_writer(u'      <li class="disabled"><a href="#" aria-label="')
+                __M_writer(unicode(messages("Newer posts")))
+                __M_writer(u'"><span aria-hidden="true">&laquo;</span></a></li>\n')
         for i, link in enumerate(page_links):
             if abs(i - current_page) <= surrounding or i == 0 or i == len(page_links) - 1:
-                if i == current_page:
-                    __M_writer(u'        <span class="current-page">')
-                    __M_writer(unicode(i+1))
-                    __M_writer(u'</span>\n')
-                else:
-                    __M_writer(u'        <a href="')
-                    __M_writer(unicode(page_links[i]))
-                    __M_writer(u'">')
-                    __M_writer(unicode(i+1))
-                    __M_writer(u'</a>\n')
+                __M_writer(u'      <li ')
+                __M_writer(unicode(' class="active"' if i == current_page else ''))
+                __M_writer(u'><a href="')
+                __M_writer(unicode(link))
+                __M_writer(u'">')
+                __M_writer(unicode(i + 1))
+                __M_writer(unicode(' <span class="sr-only">(current)</span>' if i == current_page else ''))
+                __M_writer(u'</a></li>\n')
             elif i == current_page - surrounding - 1 or i == current_page + surrounding + 1:
-                __M_writer(u'      <span class="ellipsis">\u2026</span>\n')
-        __M_writer(u'</div>\n')
+                __M_writer(u'      <li class="disabled"><a href="#" aria-label="\u2026"><span aria-hidden="true">\u2026</span></a></li>\n')
+        if prev_next_links_reversed:
+            if prevlink:
+                __M_writer(u'      <li><a href="')
+                __M_writer(unicode(prevlink))
+                __M_writer(u'" aria-label="')
+                __M_writer(unicode(messages("Newer posts")))
+                __M_writer(u'"><span aria-hidden="true">&raquo;</span></a></li>\n')
+            else:
+                __M_writer(u'      <li class="disabled"><a href="#" aria-label="')
+                __M_writer(unicode(messages("Newer posts")))
+                __M_writer(u'"><span aria-hidden="true">&raquo;</span></a></li>\n')
+        else:
+            if nextlink:
+                __M_writer(u'      <li><a href="')
+                __M_writer(unicode(nextlink))
+                __M_writer(u'" aria-label="')
+                __M_writer(unicode(messages("Older posts")))
+                __M_writer(u'"><span aria-hidden="true">&raquo;</span></a></li>\n')
+            else:
+                __M_writer(u'      <li class="disabled"><a href="#" aria-label="')
+                __M_writer(unicode(messages("Older posts")))
+                __M_writer(u'"><span aria-hidden="true">&raquo;</span></a></li>\n')
+        __M_writer(u'  </ul>\n</nav>\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -54,6 +97,6 @@ def render_page_navigation(context,current_page,page_links,prevlink,nextlink,pre
 
 """
 __M_BEGIN_METADATA
-{"source_encoding": "utf-8", "line_map": {"48": 12, "34": 2, "35": 4, "36": 5, "37": 6, "38": 7, "39": 7, "40": 7, "41": 8, "42": 9, "43": 9, "44": 9, "45": 9, "46": 9, "47": 11, "16": 0, "49": 15, "21": 16, "55": 49, "27": 2}, "uri": "pagination_helper.tmpl", "filename": "/Users/mehran/anaconda2/lib/python2.7/site-packages/nikola/data/themes/base/templates/pagination_helper.tmpl"}
+{"source_encoding": "utf-8", "line_map": {"16": 0, "21": 40, "27": 2, "35": 2, "36": 5, "37": 6, "38": 7, "39": 7, "40": 7, "41": 7, "42": 7, "43": 8, "44": 9, "45": 9, "46": 9, "47": 11, "48": 12, "49": 13, "50": 13, "51": 13, "52": 13, "53": 13, "54": 14, "55": 15, "56": 15, "57": 15, "58": 18, "59": 19, "60": 20, "61": 20, "62": 20, "63": 20, "64": 20, "65": 20, "66": 20, "67": 20, "68": 21, "69": 22, "70": 25, "71": 26, "72": 27, "73": 27, "74": 27, "75": 27, "76": 27, "77": 28, "78": 29, "79": 29, "80": 29, "81": 31, "82": 32, "83": 33, "84": 33, "85": 33, "86": 33, "87": 33, "88": 34, "89": 35, "90": 35, "91": 35, "92": 38, "98": 92}, "uri": "pagination_helper.tmpl", "filename": "/Users/mehran/anaconda2/lib/python2.7/site-packages/nikola/data/themes/bootstrap3/templates/pagination_helper.tmpl"}
 __M_END_METADATA
 """
