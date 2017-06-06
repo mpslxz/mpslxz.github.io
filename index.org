@@ -11,7 +11,7 @@
 #+MACRO: NEWLINE @@html:<br>@@
 
 
-* Projects @UBC:
+* Selected projects @UBC:
 ** Real-time plane classification of 3D ultrasound volumes of the lumbar spine. 
 #+ATTR_HTML: :width 30% :height 30%
 #+ATTR_HTML: :align right
