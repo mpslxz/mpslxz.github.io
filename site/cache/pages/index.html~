@@ -56,6 +56,9 @@ In this paper, we propose an open-source toolkit for medical image analysis with
 <p>
 <img src="../../images/SpineDataFlowBackup_v2.png" alt="SpineDataFlowBackup_v2.png" align="right" width="45%" height="45%" />
 Percutaneous needle insertion procedures on the spine often require proper identification of the vertebral level in order to effectively deliver anesthetics and analgesic agents to achieve adequate block. In this study, we proposed a system to identify the vertebrae, assigning them to their respective levels, and track them in a standard sequence of ultrasound images, when imaged in the paramedian plane. In particular, a deep network is trained to automatically learn the anatomical features of the lamina peaks, and classify image patches, for pixel-level classification.
+</p>
+
+<p>
 [<a href="http://proceedings.spiedigitallibrary.org/proceeding.aspx?articleid=2609131">Paper</a>]
 </p>
 </div>
