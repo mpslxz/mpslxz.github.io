@@ -7,11 +7,19 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://mpslxz.github.io/</loc>
-  <lastmod>2017-06-05T20:52:00Z</lastmod>
+  <lastmod>2017-06-05T21:37:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://mpslxz.github.io/2017/</loc>
+  <lastmod>2017-06-05T21:27:00Z</lastmod>
  </url>
  <url>
   <loc>http://mpslxz.github.io/archive.html</loc>
-  <lastmod>2017-06-05T20:52:00Z</lastmod>
+  <lastmod>2017-06-06T00:23:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://mpslxz.github.io/blog/</loc>
+  <lastmod>2017-06-05T21:23:00Z</lastmod>
  </url>
  <url>
   <loc>http://mpslxz.github.io/categories/</loc>
@@ -24,5 +32,13 @@
  <url>
   <loc>http://mpslxz.github.io/listings/</loc>
   <lastmod>2017-06-05T20:52:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://mpslxz.github.io/posts/test/</loc>
+  <lastmod>2017-06-05T21:27:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://mpslxz.github.io/welcome/</loc>
+  <lastmod>2017-06-05T21:37:00Z</lastmod>
  </url>
 </urlset>
