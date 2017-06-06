@@ -5,9 +5,9 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1496696083.184959
+_modified_time = 1496709591.853459
 _enable_loop = True
-_template_filename = u'/Users/mehran/anaconda2/lib/python2.7/site-packages/nikola/data/themes/bootstrap3/templates/gallery.tmpl'
+_template_filename = u'/Users/mehran/anaconda2/lib/python2.7/site-packages/nikola/data/themes/base/templates/gallery.tmpl'
 _template_uri = u'gallery.tmpl'
 _source_encoding = 'utf-8'
 _exports = [u'content', u'sourcelink', u'extra_js', u'extra_head']
@@ -79,12 +79,12 @@ def render_body(context,**pageargs):
             context['self'].extra_head(**pageargs)
         
 
-        __M_writer(u'\n\n\n')
+        __M_writer(u'\n\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'extra_js'):
             context['self'].extra_js(**pageargs)
         
 
-        __M_writer(u'\n')
+        __M_writer(u'\n\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -124,7 +124,7 @@ def render_content(context,**pageargs):
             for folder, ftitle in folders:
                 __M_writer(u'        <li><a href="')
                 __M_writer(unicode(folder))
-                __M_writer(u'"><i class="glyphicon glyphicon-folder-open"></i>&nbsp;')
+                __M_writer(u'"><i\n        class="icon-folder-open"></i>&nbsp;')
                 __M_writer(filters.html_escape(unicode(ftitle)))
                 __M_writer(u'</a></li>\n')
             __M_writer(u'    </ul>\n')
@@ -143,6 +143,7 @@ def render_content(context,**pageargs):
                 __M_writer(u'" /></a>\n')
             __M_writer(u'</ul>\n</noscript>\n')
         if site_has_comments and enable_comments:
+            __M_writer(u'    ')
             __M_writer(unicode(comments.comment_form(None, permalink, title)))
             __M_writer(u'\n')
         return ''
@@ -173,11 +174,11 @@ def render_extra_js(context,**pageargs):
         thumbnail_size = _import_ns.get('thumbnail_size', context.get('thumbnail_size', UNDEFINED))
         photo_array_json = _import_ns.get('photo_array_json', context.get('photo_array_json', UNDEFINED))
         __M_writer = context.writer()
-        __M_writer(u'\n<script src="/assets/js/flowr.plugin.js"></script>\n<script>\njsonContent = ')
+        __M_writer(u'\n<script src="/assets/js/flowr.js"></script>\n<script>\njsonContent = ')
         __M_writer(unicode(photo_array_json))
-        __M_writer(u';\n$("#gallery_container").flowr({\n        data : jsonContent,\n        height : ')
+        __M_writer(u';\nflowr(document.querySelectorAll("#gallery_container")[0], {\n        data : jsonContent,\n        height : ')
         __M_writer(unicode(thumbnail_size))
-        __M_writer(u'*.6,\n        padding: 5,\n        rows: -1,\n        render : function(params) {\n            // Just return a div, string or a dom object, anything works fine\n            img = $("<img />").attr({\n                \'src\': params.itemData.url_thumb,\n                \'width\' : params.width,\n                \'height\' : params.height\n            }).css(\'max-width\', \'100%\');\n            link = $( "<a></a>").attr({\n                \'href\': params.itemData.url,\n                \'class\': \'image-reference\'\n            });\n            div = $("<div />").addClass(\'image-block\').attr({\n                \'title\': params.itemData.title,\n                \'data-toggle\': "tooltip",\n            });\n            link.append(img);\n            div.append(link);\n            div.hover(div.tooltip());\n            return div;\n        },\n        itemWidth : function(data) { return data.size.w; },\n        itemHeight : function(data) { return data.size.h; },\n        complete : function(params) {\n            if( jsonContent.length > params.renderedItems ) {\n                nextRenderList = jsonContent.slice( params.renderedItems );\n            }\n        }\n    });\n$("a.image-reference").colorbox({rel:"gal", maxWidth:"100%",maxHeight:"100%",scalePhotos:true});\n$(\'a.image-reference[href="\'+window.location.hash.substring(1,1000)+\'"]\').click();\n</script>\n')
+        __M_writer(u'*.6,\n        padding: 5,\n        rows: -1,\n        render : function(params) {\n            // Just return a div, string or a dom object, anything works fine\n            var img = document.createElement("img");\n            img.setAttribute(\'src\', params.itemData.url_thumb);\n            img.setAttribute(\'width\', params.width);\n            img.setAttribute(\'height\', params.height);\n            img.style.maxWidth = \'100%\';\n            link = document.createElement("a");\n            link.setAttribute(\'href\', params.itemData.url);\n            link.setAttribute(\'class\', \'image-reference\');\n            div = document.createElement("div");\n            div.setAttribute(\'class\', \'image-block\');\n            div.setAttribute(\'title\', params.itemData.title);\n            div.setAttribute(\'data-toggle\', "tooltip")\n            link.append(img);\n            div.append(link);\n            //div.hover(div.tooltip());\n            return div;\n        },\n        itemWidth : function(data) { return data.size.w; },\n        itemHeight : function(data) { return data.size.h; },\n        complete : function(params) {\n            if( jsonContent.length > params.renderedItems ) {\n                nextRenderList = jsonContent.slice( params.renderedItems );\n            }\n        }\n    });\n    baguetteBox.run(\'#gallery_container\');\n</script>\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -208,6 +209,7 @@ def render_extra_head(context,**pageargs):
                     __M_writer(u'" href="')
                     __M_writer(unicode(_link('gallery', gallery_path, langname)))
                     __M_writer(u'">\n')
+        __M_writer(u'<link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -215,6 +217,6 @@ def render_extra_head(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"source_encoding": "utf-8", "line_map": {"128": 20, "129": 20, "130": 22, "131": 24, "132": 26, "133": 27, "134": 29, "135": 30, "136": 30, "137": 30, "138": 30, "139": 30, "140": 31, "141": 31, "142": 31, "143": 31, "144": 33, "145": 36, "146": 37, "147": 37, "23": 4, "153": 5, "26": 3, "32": 0, "166": 62, "210": 55, "176": 62, "177": 65, "178": 65, "179": 68, "180": 68, "186": 41, "65": 2, "66": 3, "67": 4, "72": 5, "201": 42, "202": 42, "203": 52, "204": 53, "77": 39, "206": 55, "205": 54, "208": 55, "209": 55, "82": 59, "87": 102, "216": 210, "207": 55, "93": 7, "200": 41, "111": 7, "112": 8, "113": 8, "114": 9, "115": 10, "116": 10, "117": 10, "118": 12, "119": 13, "120": 14, "121": 14, "122": 17, "123": 18, "124": 19, "125": 20, "126": 20, "127": 20}, "uri": "gallery.tmpl", "filename": "/Users/mehran/anaconda2/lib/python2.7/site-packages/nikola/data/themes/bootstrap3/templates/gallery.tmpl"}
+{"source_encoding": "utf-8", "line_map": {"128": 21, "129": 21, "130": 23, "131": 25, "132": 27, "133": 28, "134": 30, "135": 31, "136": 31, "137": 31, "138": 31, "139": 31, "140": 32, "141": 32, "142": 32, "143": 32, "144": 34, "145": 37, "146": 38, "147": 38, "148": 38, "23": 4, "26": 3, "154": 5, "32": 0, "167": 63, "177": 63, "178": 66, "179": 66, "180": 69, "181": 69, "187": 42, "65": 2, "66": 3, "67": 4, "72": 5, "201": 42, "202": 43, "203": 43, "204": 53, "77": 40, "206": 55, "205": 54, "208": 56, "209": 56, "82": 61, "211": 56, "212": 60, "87": 101, "218": 212, "207": 56, "93": 7, "210": 56, "111": 7, "112": 8, "113": 8, "114": 9, "115": 10, "116": 10, "117": 10, "118": 12, "119": 13, "120": 14, "121": 14, "122": 17, "123": 18, "124": 19, "125": 20, "126": 20, "127": 20}, "uri": "gallery.tmpl", "filename": "/Users/mehran/anaconda2/lib/python2.7/site-packages/nikola/data/themes/base/templates/gallery.tmpl"}
 __M_END_METADATA
 """
