@@ -6,15 +6,23 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
+  <loc>http://mpslxz.github.io/categories/latex.xml</loc>
+  <lastmod>2017-06-08T08:58:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://mpslxz.github.io/categories/mathjax.xml</loc>
+  <lastmod>2017-06-08T09:25:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>http://mpslxz.github.io/galleries/rss.xml</loc>
-  <lastmod>2017-06-06T03:46:00Z</lastmod>
+  <lastmod>2017-06-08T09:54:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mpslxz.github.io/rss.xml</loc>
-  <lastmod>2017-06-06T00:59:00Z</lastmod>
+  <lastmod>2017-06-08T09:46:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mpslxz.github.io/sitemap.xml</loc>
-  <lastmod>2017-06-06T03:46:00Z</lastmod>
+  <lastmod>2017-06-08T09:54:00Z</lastmod>
  </sitemap>
 </sitemapindex>
