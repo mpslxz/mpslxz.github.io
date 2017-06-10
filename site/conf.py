@@ -17,8 +17,8 @@ import time
 
 
 # Data about this site
-BLOG_AUTHOR = "Mehran Pesteie"  # (translatable)
-BLOG_TITLE = "[MP]"  # (translatable)
+BLOG_AUTHOR = "mpslxz"  # (translatable)
+BLOG_TITLE = "Yours Geekly"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
 SITE_URL = "http://mpslxz.github.io/"
@@ -136,8 +136,7 @@ NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ("/archive.html", "Archive"),
         ("/categories/", "Tags"),
-        ("/rss.xml", "RSS feed"),
-        ("/blog/", "Blog"),
+        ("/rss.xml", "RSS feed")
     ),
 }
 
@@ -513,7 +512,7 @@ HIDDEN_AUTHORS = ['Guest']
 # Final location for the main blog page and sibling paginated pages is
 # output / TRANSLATION[lang] / INDEX_PATH / index-*.html
 # (translatable)
-INDEX_PATH = "blog"
+INDEX_PATH = ""
 
 # Optional HTML that displayed on “main” blog index.html files.
 # May be used for a greeting. (translatable)
