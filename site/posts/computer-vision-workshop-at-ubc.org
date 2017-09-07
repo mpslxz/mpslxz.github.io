@@ -6,7 +6,7 @@
 .. category: 
 .. link: 
 .. description: 
-.. type: text
+.. type: short
 #+END_COMMENT
 
 
