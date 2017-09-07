@@ -6,7 +6,7 @@
 .. category: 
 .. link: 
 .. description: 
-.. type: short
+.. type: text
 #+END_COMMENT
 
 [[../../images/keyboard.jpg]]
