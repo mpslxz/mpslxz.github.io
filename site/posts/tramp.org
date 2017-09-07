@@ -1,0 +1,11 @@
+#+BEGIN_COMMENT
+.. title: Tramp or how to use emacs over ssh
+.. slug: tramp
+.. date: 2017-06-24 01:35:03 UTC-07:00
+.. tags: draft 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
