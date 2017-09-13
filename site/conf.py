@@ -26,7 +26,8 @@ SITE_URL = "http://mpslxz.github.io/"
 # If not set, defaults to SITE_URL
 # BASE_URL = "http://mpslxz.github.io/"
 BLOG_EMAIL = "\"\""
-BLOG_DESCRIPTION = "A place to talk about machine learning, tech, computers, editors and etc."  # (translatable)
+# (translatable)
+BLOG_DESCRIPTION = "A place to talk about machine learning, tech, computers, editors and etc."
 
 # Nikola is multilingual!
 #
@@ -206,7 +207,7 @@ PAGES = PAGES + (("pages/*.org", "", "story.tmpl"),)
 # (e.g. 'Europe/Zurich')
 # Also, if you want to use a different time zone in some of your posts,
 # you can use the ISO 8601/RFC 3339 format (ex. 2012-03-30T23:00:00+02:00)
-TIMEZONE = "US/Pacific"
+TIMEZONE = "Canada/Pacific"
 
 # If you want to use ISO 8601 (also valid RFC 3339) throughout Nikola
 # (especially in new_post), set this to True.
@@ -277,7 +278,7 @@ COMPILERS = {
     # The resulting files have .php extensions, making it possible to run
     # them without reconfiguring your server to recognize them.
     "php": ('.php',),
-    "orgmode": ('.org',),    
+    "orgmode": ('.org',),
     # Pandoc detects the input from the source filename
     # but is disabled by default as it would conflict
     # with many of the others.
@@ -1063,7 +1064,8 @@ DEPLOY_DRAFTS = False
 # Note: most Nikola-specific extensions are done via the Nikola plugin system,
 #       with the MarkdownExtension class and should not be added here.
 # The default is ['fenced_code', 'codehilite']
-MARKDOWN_EXTENSIONS = ['markdown.extensions.fenced_code', 'markdown.extensions.codehilite', 'markdown.extensions.extra']
+MARKDOWN_EXTENSIONS = ['markdown.extensions.fenced_code',
+                       'markdown.extensions.codehilite', 'markdown.extensions.extra']
 
 # Extra options to pass to the pandoc command.
 # by default, it's empty, is a list of strings, for example
