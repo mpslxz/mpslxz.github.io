@@ -1,1 +1,29 @@
+<p>
+GNU Emacs is an awesome editor which has been around for quite some time. The flexible nature of it and its extendibility has turned Emacs into one of the best text editors which you can do pretty much anything in it including listening to music, checking email, surfing web, playing tetris and so on (I am not gonna go into <a href="https://en.wikipedia.org/wiki/Editor_war">Emacs vs. Vim</a>  debates at least for now). One of the most useful Emacs packages is <a href="https://www.gnu.org/software/tramp/">Tramp</a>. Tramp simply brings ssh to Emacs and allows you to load a buffer over ssh, which is wonderful for remote editing.
+Consider this scenario, which is very likely to happen to a lot of us: you have a powerful machine somewhere which you have remote access to. You need to write some code or implement an algorithm which needs a lot of computation power or a specific hardware (BAZINGA! GPU). Obviously, there are one hundred and one different ways to do it. You can use a cloud file sharing, online repository management system (github etc.) or if you wanna be geeky, ssh to the remote machine and fire up an editor on it. All of these are fine but if you are used to your editor and you have configed it to your fitting, it becomes tedious to work on another system. So in this case, Tramp saves your day with a ton of awesomeness (if you use emacs). One of the nice things about Tramp is that it can do multihop ssh as well. So if you have defined a gateway via <a href="http://undeadly.org/cgi?action=article&sid=20070925181947">ProxyCommand</a>, Tramp still will be able to use it out-of-the-box. 
+Another cool feature and benefit of Tramp is that you can integrate it with other emacs packages. So technically, you can start X11 applications remotely and forward the display to your local machine (hopefully, I will write another post about it sometime later). Or, load jpg images in a local buffer from the remote computer.
+</p>
 
+<p>
+To use Tramp all you do is:
+</p>
+<ol class="org-ol">
+<li>open the find file <b>(C-c C-f)</b>,
+</li>
+<li>go all the way back to the root folder
+</li>
+<li>type <b>ssh:</b>
+</li>
+<li>immediately, you are gonna see all of the hosts that you have connected to before.
+</li>
+<li>go ahead and select the one that you want to connect to 
+</li>
+<li>enter your password
+</li>
+<li>viola! a dired buffer opens at the home folder, just as normal ssh over terminal (you can also load any desired directory when "ssh"ing)
+</li>
+</ol>
+
+<p>
+I highly recommend going over the <a href="https://www.gnu.org/software/tramp/">manual</a> to learn the ins and outs of this awesome tool.
+</p>
