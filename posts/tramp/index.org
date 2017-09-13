@@ -1,0 +1,25 @@
+#+BEGIN_COMMENT
+.. title: Tramp: A great tool for remote code development.
+.. slug: tramp
+.. date: 2017-06-24 01:35:03 UTC-07:00
+.. tags: emacs, remote editing, tramp
+.. category: emacs
+.. link: 
+.. description: How to use emacs for remote editing on your local machine.
+.. type: text
+#+END_COMMENT
+
+GNU Emacs is an awesome editor which has been around for quite some time. The flexible nature of it and its extendibility has turned Emacs into one of the best text editors which you can do pretty much anything in it including listening to music, checking email, surfing web, playing tetris and so on (I am not gonna go into [[https://en.wikipedia.org/wiki/Editor_war][Emacs vs. Vim]]  debates at least for now). One of the most useful Emacs packages is [[https://www.gnu.org/software/tramp/][Tramp]]. Tramp simply brings ssh to Emacs and allows you to load a buffer over ssh, which is wonderful for remote editing.
+Consider this scenario, which is very likely to happen to a lot of us: you have a powerful machine somewhere which you have remote access to. You need to write some code or implement an algorithm which needs a lot of computation power or a specific hardware (BAZINGA! GPU). Obviously, there are one hundred and one different ways to do it. You can use a cloud file sharing, online repository management system (github etc.) or if you wanna be geeky, ssh to the remote machine and fire up an editor on it. All of these are fine but if you are used to your editor and you have configed it to your fitting, it becomes tedious to work on another system. So in this case, Tramp saves your day with a ton of awesomeness (if you use emacs). One of the nice things about Tramp is that it can do multihop ssh as well. So if you have defined a gateway via [[http://undeadly.org/cgi?action=article&sid=20070925181947][ProxyCommand]], Tramp still will be able to use it out-of-the-box. 
+Another cool feature and benefit of Tramp is that you can integrate it with other emacs packages. So technically, you can start X11 applications remotely and forward the display to your local machine (hopefully, I will write another post about it sometime later). Or, load jpg images in a local buffer from the remote computer.
+
+To use Tramp all you do is:
+1. open the find file *(C-c C-f)*,
+2. go all the way back to the root folder
+3. type *ssh:*
+4. immediately, you are gonna see all of the hosts that you have connected to before.
+5. go ahead and select the one that you want to connect to 
+6. enter your password
+7. viola! a dired buffer opens at the home folder, just as normal ssh over terminal (you can also load any desired directory when "ssh"ing)
+
+I highly recommend going over the [[https://www.gnu.org/software/tramp/][manual]] to learn the ins and outs of this awesome tool.
