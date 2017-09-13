@@ -1,7 +1,7 @@
 #+BEGIN_COMMENT
 .. title: Tramp: A great tool for remote code development.
 .. slug: tramp
-.. date: 2017-06-24 01:35:03 UTC-07:00
+.. date: 2017-09-12 22:20
 .. tags: emacs, remote editing, tramp
 .. category: emacs
 .. link: 
