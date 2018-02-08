@@ -15,19 +15,47 @@
  </url>
  <url>
   <loc>http://mpslxz.github.io/archive.html</loc>
-  <lastmod>2017-09-13T05:28:00Z</lastmod>
+  <lastmod>2018-02-08T21:38:00Z</lastmod>
  </url>
  <url>
   <loc>http://mpslxz.github.io/categories/</loc>
-  <lastmod>2017-09-13T05:13:00Z</lastmod>
+  <lastmod>2018-02-08T22:59:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://mpslxz.github.io/categories/cat_cv/</loc>
+  <lastmod>2018-02-08T22:57:00Z</lastmod>
  </url>
  <url>
   <loc>http://mpslxz.github.io/categories/cat_emacs/</loc>
   <lastmod>2017-09-13T05:13:00Z</lastmod>
  </url>
  <url>
+  <loc>http://mpslxz.github.io/categories/cat_tutorial/</loc>
+  <lastmod>2018-02-08T22:57:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://mpslxz.github.io/categories/computer-vision/</loc>
+  <lastmod>2018-02-08T22:57:00Z</lastmod>
+ </url>
+ <url>
   <loc>http://mpslxz.github.io/categories/emacs/</loc>
   <lastmod>2017-09-13T05:08:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://mpslxz.github.io/categories/install/</loc>
+  <lastmod>2018-02-08T22:57:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://mpslxz.github.io/categories/links/</loc>
+  <lastmod>2018-02-08T22:57:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://mpslxz.github.io/categories/opencv/</loc>
+  <lastmod>2018-02-08T22:57:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://mpslxz.github.io/categories/python/</loc>
+  <lastmod>2018-02-08T22:59:00Z</lastmod>
  </url>
  <url>
   <loc>http://mpslxz.github.io/categories/remote-editing/</loc>
@@ -38,12 +66,20 @@
   <lastmod>2017-09-13T05:08:00Z</lastmod>
  </url>
  <url>
+  <loc>http://mpslxz.github.io/categories/workshop/</loc>
+  <lastmod>2018-02-08T22:57:00Z</lastmod>
+ </url>
+ <url>
   <loc>http://mpslxz.github.io/galleries/</loc>
   <lastmod>2017-06-05T20:52:00Z</lastmod>
  </url>
  <url>
   <loc>http://mpslxz.github.io/listings/</loc>
   <lastmod>2017-06-05T20:52:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://mpslxz.github.io/posts/computer-vision-workshop-at-ubc/</loc>
+  <lastmod>2018-02-08T21:37:00Z</lastmod>
  </url>
  <url>
   <loc>http://mpslxz.github.io/posts/tramp/</loc>

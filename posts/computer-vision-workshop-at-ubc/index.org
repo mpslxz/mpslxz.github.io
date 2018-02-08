@@ -1,0 +1,59 @@
+#+BEGIN_COMMENT
+.. title: Links to download and install Anaconda and OpenCV
+.. slug: computer-vision-workshop-at-ubc
+.. date: 2017-09-06 21:50:53 UTC-07:00
+.. tags: opencv, computer vision, python
+.. category: cv
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+Hi Everyone,
+
+Firstly, I want to say thank you guys for registering for the CV workshop. This is going to be an introductory workshop to opencv, which is one of the most popular libraries for computer vision and image processing. Although opencv has different interfaces for different languages, we will use python throughout the workshop. The reason that I chose python is: 
+1. at this point you've had a couple of python programming courses/workshops so you are fairly familiar with python, 
+2. python is intuitive and easy to use, 
+3. we will jupyter notebooks along with the normal python files (.py) to test and see immediate results. As you know, the notebooks provide an interactive environment, which is a plus.
+
+The software packages that we are going to use are:
+1. Anaconda for python 2.7, to have necessary python packages installed
+2. OpenCV 3
+3. Your editor/IDE of choice like PyCharm. Personally, I use Emacs but it does not mean that you need to use it as well.
+
+I am going to put all of the download links and also installation documents in this post. Just please make sure that you download and install Anaconda for python 2.7 and opencv3.
+
+* PyCharm
+If you want to use PyCharm as your IDE, you can find the download it and find the instructions [[https://www.jetbrains.com/pycharm/download/][here]]. 
+
+@@html:<b>@@Tip: You can register as a student and get the professional version of PyCharm for free.@@html:</b>@@
+
+* Anadonda for Windows:
+- [[https://repo.continuum.io/archive/Anaconda2-5.0.1-Windows-x86_64.exe][Download from here]]
+- [[https://docs.anaconda.com/anaconda/install/windows][How to install]] 
+
+@@html:<b>@@NOTE:@@html:</b>@@ Remember where you install Anaconda. You are going to need it when installing OpenCV. Let's call it ~ANACONDA_FOLDER~
+
+@@html:<b>@@NOTE:@@html:</b>@@ Check the box where it says "Add Anaconda to my PATH variable". If you have already installed a python version, this will replace the current Anacanda version with the previous one.
+
+  
+* Anaconda for GNU/Linux:
+- [[https://repo.continuum.io/archive/Anaconda2-5.0.1-Linux-x86_64.sh][Download from here]]
+- [[https://docs.anaconda.com/anaconda/install/linux][How to install]]
+  
+* Anaconda for MacOS:
+- [[https://repo.continuum.io/archive/Anaconda2-5.0.1-MacOSX-x86_64.sh][Download from here]]
+- [[https://docs.anaconda.com/anaconda/install/mac-os][How to install]]
+  
+* OpenCV3:
+** For Windows
+1. Go to [[https://opencv.org/releases.html][the opencv download page]] and download version 3.1.0 for Windows. 
+2. Click and extract the downloaded file.
+3. Go to ~opencv\build\python\2.7~ folder.
+4. Copy ~cv2.pyd~ to ~ANACONDA_FOLDER\lib\site_packages~.
+5. Done!
+** For GNU/Linux and MacOS:
+1. Open a terminal window.
+2. Type ~conda install -c menpo opencv3~
+3. Done!
+
+That's it for now. See you at the workshop. 

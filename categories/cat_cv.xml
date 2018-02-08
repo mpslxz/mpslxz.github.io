@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Yours Geekly (Posts about cv)</title><link>http://mpslxz.github.io/</link><description></description><atom:link href="http://mpslxz.github.io/categories/cat_cv.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><copyright>Contents © 2018 &lt;a href="mailto:"""&gt;mpslxz&lt;/a&gt; </copyright><lastBuildDate>Thu, 08 Feb 2018 22:59:39 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Links to download and install Anaconda and OpenCV</title><link>http://mpslxz.github.io/posts/computer-vision-workshop-at-ubc/</link><dc:creator>mpslxz</dc:creator><description>&lt;p&gt;
+Hi Everyone,
+&lt;/p&gt;
+
+&lt;p&gt;
+Firstly, I want to say thank you guys for registering for the CV workshop. This is going to be an introductory workshop to opencv, which is one of the most popular libraries for computer vision and image processing. Although opencv has different interfaces for different languages, we will use python throughout the workshop. The reason that I chose python is: 
+&lt;/p&gt;
+&lt;ol class="org-ol"&gt;
+&lt;li&gt;at this point you've had a couple of python programming courses/workshops so you are fairly familiar with python, 
+&lt;/li&gt;
+&lt;li&gt;python is intuitive and easy to use, 
+&lt;/li&gt;
+&lt;li&gt;we will jupyter notebooks along with the normal python files (.py) to test and see immediate results. As you know, the notebooks provide an interactive environment, which is a plus.
+&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;
+The software packages that we are going to use are:
+&lt;/p&gt;
+&lt;ol class="org-ol"&gt;
+&lt;li&gt;Anaconda for python 2.7, to have necessary python packages installed
+&lt;/li&gt;
+&lt;li&gt;OpenCV 3
+&lt;/li&gt;
+&lt;li&gt;Your editor/IDE of choice like PyCharm. Personally, I use Emacs but it does not mean that you need to use it as well.
+&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;
+I am going to put all of the download links and also installation documents in this post. Just please make sure that you download and install Anaconda for python 2.7 and opencv3.
+&lt;/p&gt;
+
+&lt;div id="outline-container-sec-1" class="outline-2"&gt;
+&lt;h2 id="sec-1"&gt;PyCharm&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-1"&gt;
+&lt;p&gt;
+If you want to use PyCharm as your IDE, you can find the download it and find the instructions &lt;a href="https://www.jetbrains.com/pycharm/download/"&gt;here&lt;/a&gt;. 
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;b&gt;Tip: You can register as a student and get the professional version of PyCharm for free.&lt;/b&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-2" class="outline-2"&gt;
+&lt;h2 id="sec-2"&gt;Anadonda for Windows:&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-2"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;a href="https://repo.continuum.io/archive/Anaconda2-5.0.1-Windows-x86_64.exe"&gt;Download from here&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.anaconda.com/anaconda/install/windows"&gt;How to install&lt;/a&gt; 
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+&lt;b&gt;NOTE:&lt;/b&gt; Remember where you install Anaconda. You are going to need it when installing OpenCV. Let's call it &lt;code&gt;ANACONDA_FOLDER&lt;/code&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;b&gt;NOTE:&lt;/b&gt; Check the box where it says "Add Anaconda to my PATH variable". If you have already installed a python version, this will replace the current Anacanda version with the previous one.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div id="outline-container-sec-3" class="outline-2"&gt;
+&lt;h2 id="sec-3"&gt;Anaconda for GNU/Linux:&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-3"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;a href="https://repo.continuum.io/archive/Anaconda2-5.0.1-Linux-x86_64.sh"&gt;Download from here&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.anaconda.com/anaconda/install/linux"&gt;How to install&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-4" class="outline-2"&gt;
+&lt;h2 id="sec-4"&gt;Anaconda for MacOS:&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-4"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;a href="https://repo.continuum.io/archive/Anaconda2-5.0.1-MacOSX-x86_64.sh"&gt;Download from here&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.anaconda.com/anaconda/install/mac-os"&gt;How to install&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-5" class="outline-2"&gt;
+&lt;h2 id="sec-5"&gt;OpenCV3:&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-5"&gt;
+&lt;/div&gt;&lt;div id="outline-container-sec-5-1" class="outline-3"&gt;
+&lt;h3 id="sec-5-1"&gt;For Windows&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-5-1"&gt;
+&lt;ol class="org-ol"&gt;
+&lt;li&gt;Go to &lt;a href="https://opencv.org/releases.html"&gt;the opencv download page&lt;/a&gt; and download version 3.1.0 for Windows. 
+&lt;/li&gt;
+&lt;li&gt;Click and extract the downloaded file.
+&lt;/li&gt;
+&lt;li&gt;Go to &lt;code&gt;opencv\build\python\2.7&lt;/code&gt; folder.
+&lt;/li&gt;
+&lt;li&gt;Copy &lt;code&gt;cv2.pyd&lt;/code&gt; to &lt;code&gt;ANACONDA_FOLDER\lib\site_packages&lt;/code&gt;.
+&lt;/li&gt;
+&lt;li&gt;Done!
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-sec-5-2" class="outline-3"&gt;
+&lt;h3 id="sec-5-2"&gt;For GNU/Linux and MacOS:&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-5-2"&gt;
+&lt;ol class="org-ol"&gt;
+&lt;li&gt;Open a terminal window.
+&lt;/li&gt;
+&lt;li&gt;Type &lt;code&gt;conda install -c menpo opencv3&lt;/code&gt;
+&lt;/li&gt;
+&lt;li&gt;Done!
+&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;
+That's it for now. See you at the workshop. 
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><category>computer vision</category><category>opencv</category><category>python</category><guid>http://mpslxz.github.io/posts/computer-vision-workshop-at-ubc/</guid><pubDate>Thu, 07 Sep 2017 04:50:53 GMT</pubDate></item></channel></rss>
