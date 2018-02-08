@@ -6,31 +6,63 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
+  <loc>http://mpslxz.github.io/categories/cat_cv.xml</loc>
+  <lastmod>2018-02-08T22:59:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>http://mpslxz.github.io/categories/cat_emacs.xml</loc>
-  <lastmod>2017-09-13T05:27:00Z</lastmod>
+  <lastmod>2018-02-08T22:54:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://mpslxz.github.io/categories/cat_tutorial.xml</loc>
+  <lastmod>2018-02-08T22:57:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://mpslxz.github.io/categories/computer-vision.xml</loc>
+  <lastmod>2018-02-08T22:59:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mpslxz.github.io/categories/emacs.xml</loc>
-  <lastmod>2017-09-13T05:27:00Z</lastmod>
+  <lastmod>2018-02-08T22:54:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://mpslxz.github.io/categories/install.xml</loc>
+  <lastmod>2018-02-08T22:58:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://mpslxz.github.io/categories/links.xml</loc>
+  <lastmod>2018-02-08T22:58:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://mpslxz.github.io/categories/opencv.xml</loc>
+  <lastmod>2018-02-08T22:59:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://mpslxz.github.io/categories/python.xml</loc>
+  <lastmod>2018-02-08T22:59:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mpslxz.github.io/categories/remote-editing.xml</loc>
-  <lastmod>2017-09-13T05:27:00Z</lastmod>
+  <lastmod>2018-02-08T22:54:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mpslxz.github.io/categories/tramp.xml</loc>
-  <lastmod>2017-09-13T05:27:00Z</lastmod>
+  <lastmod>2018-02-08T22:54:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://mpslxz.github.io/categories/workshop.xml</loc>
+  <lastmod>2018-02-08T22:58:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mpslxz.github.io/galleries/rss.xml</loc>
-  <lastmod>2017-09-13T05:27:00Z</lastmod>
+  <lastmod>2018-02-08T21:37:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mpslxz.github.io/rss.xml</loc>
-  <lastmod>2017-09-13T05:28:00Z</lastmod>
+  <lastmod>2018-02-08T22:59:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mpslxz.github.io/sitemap.xml</loc>
-  <lastmod>2017-09-13T05:28:00Z</lastmod>
+  <lastmod>2018-02-08T22:59:00Z</lastmod>
  </sitemap>
 </sitemapindex>
